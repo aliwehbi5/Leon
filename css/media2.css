@@ -1,0 +1,215 @@
+.page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 450px auto auto auto auto auto 100px;
+  grid-template-areas: 
+  "head head head" 
+  "sel1 sel1 sel1" 
+  "sel2 sel2 sel2"
+  "sel3 sel3 sel3"
+  "sel4 sel4 sel4"
+  "last last last"
+  "foot foot foot";
+}
+
+header {
+  background-image: url(../images/mountain.jpg);
+  grid-area: head;
+  background-position-x: 30%;
+  background-position-y: -5%;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  font-size: 40px;
+  letter-spacing: -0.1rem;
+}
+
+header h2 {
+  font-size: 10px;
+  line-height: 1.2rem;
+}
+
+header img {
+  width: 65px;
+  margin: 30px 0 0 30px;
+}
+
+.one {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "pen pen pen" "diamond diamond diamond" "world world world";
+}
+
+.fa-diamond::before,
+.fa-globe::before,
+.fa-magic::before {
+  font-size: 60px;
+}
+
+.one .pen,
+.one .diamond,
+.one .world {
+  padding: 170px 100px 40px;
+}
+
+.two {
+  display: grid;
+  grid-area: sel2;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(autofill, minmax(300px));
+  grid-template-areas:
+    ". serv serv serv serv ."
+    ". graph graph graph graph ."
+    ". ui ui ui ui ."
+    ". web web web web ."
+    ". devel devel devel devel ."
+}
+
+.two .serv h1 {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two .serv p {
+  font-size: 10px;
+  top: calc(0% - 25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.two div {
+  position: relative;
+}
+
+.two h4 {
+  margin-bottom: 20px;
+}
+
+.two .moun {
+  display: none;
+}
+
+.three {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto 1fr 100px;
+  grid-template-areas: 
+  "port port port port port"
+  ". pro pro pro ."
+  ". . button . .";
+}
+
+.projects {
+  flex-direction: column;
+}
+
+.projects div {
+  width: 100%;
+}
+
+.three .port h1 {
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.three .port p {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(0% - 25px);
+
+}
+
+.three .p1,
+.three .p2 {
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+
+.button button {
+  padding: 10px;
+}
+
+.four {
+  grid-area: sel4;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas: 
+  "about about about about"
+  ". lft lft ."
+  ". rght rght .";
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.four .about {
+  margin: 40px 0;
+  position: relative;
+}
+
+.four .about h1 {
+  font-size: 70px;
+}
+
+.four .about p {
+  top: calc(0% - 30px);
+  font-size: 15px;
+}
+
+.four .cont {
+  top: 0%;
+  padding-top: 40px;
+}
+
+.aside .l1 {
+  right: 10%;
+  transform: translate(-50%, -10%);
+  -webkit-transform: translate(-50%, -10%);
+  -moz-transform: translate(-50%, -10%);
+  -ms-transform: translate(-50%, -10%);
+  -o-transform: translate(-50%, -10%);
+}
+
+.aside .l2 {
+  left: 70%;
+  transform: translate(-30%, -30%);
+  -webkit-transform: translate(-30%, -30%);
+  -moz-transform: translate(-30%, -30%);
+  -ms-transform: translate(-30%, -30%);
+  -o-transform: translate(-30%, -30%);
+}
+
+.final {
+  grid-area: last;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "cont cont cont cont"
+  "lst lst lst .";
+}
+
+.final .contact {
+  grid-area: cont;
+  padding: 40px 0;
+}
+
+.final .contact h1 {
+  font-size: 70px;
+}
+
+.final .contact p {
+  top: calc(0% - 30px);
+  font-size: 15px;
+}
+
+.final .last {
+  font-size: 20px;
+  padding-left: 20px;
+}
